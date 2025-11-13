@@ -2,7 +2,8 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../base
-namespace: staging
+- ingress.yaml
+namespace: prod 
 commonAnnotations:
   supported-by: sre@example.com
 labels:
@@ -10,4 +11,6 @@ labels:
   pairs:
     project: instavote
 patches:
+- path: preview-service.yaml
 - path: service.yaml
+- path: rollout.yaml
