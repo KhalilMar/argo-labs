@@ -13,7 +13,7 @@ spec:
   strategy:
     blueGreen:
       autoPromotionEnabled: true
-      autoPromotionSeconds: 230
+      autoPromotionSeconds: 30
       activeService: vote
       previewService: vote-preview
   template:
